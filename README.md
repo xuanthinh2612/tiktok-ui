@@ -69,12 +69,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+Cac buoc tao base 1 du an reactjs
 
+1. cai dat thu vien de customize webpack (override webpack)
 
-Cac buoc tao 1 du an reactjs
+    - npm install customize-cra react-app-rewired --dev
 
-1. cai dat thu vien de customize webpack 
-    
-    npm install customize-cra react-app-rewired --dev
+    - tao file config-overrides.js cung cap voi src
 
-2. Cài đặt babel-plugin-module-resolver
+    - add cac function can config duoc ho tro boi customize-cra vd: useBabelrc
+
+2. Cài đặt babel-plugin-module-resolver (de cho dong code import ngan hon)
+   use import '~/abc' instead of inport ../../../abc
+   ~ equal /src
+
+    - npm install --save-dev babel-plugin-module-resolver
+
+    - tao file .babelrc va copy noi dung vao file
+
+    Editors autocompletion
+
+    - tao file jsconfig.json cung cap src va them noi dung file
+
+3. Cài đặt và cấu hình Prettier
+
+    - tao dile .prettierrc
+    - tao file .vscode/settings.json
+    - cai dat prettier extendtion
+    - bat auto format on save CTRL + , va check on vao Editor: Format On Save
+
+4. Cấu hình sử dụng CSS/SASS
+    - tao Global style component
+    - cai thu vien SASS `npm i -D sass`
+    - reset CSS
+    - Default CSS: font-family, font-size, line-height

@@ -1,8 +1,7 @@
-// muc dich de ghi de cau hinh webpack
+/* muc dich de ghi de cau hinh webpack */
 
 /* config-overrides.js */
 
-module.exports = function override(config, env) {
-    //do stuff with the webpack config...
-    return config;
-  }
+const { override, useBabelRc } = require('customize-cra');
+
+module.exports = override(useBabelRc());

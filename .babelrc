@@ -1,0 +1,13 @@
+{
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                // "root": ["./src"], // de root khi muon import "abc-folder" thay vi "~/abc-folder"
+                "alias": {
+                    "~": "./src"
+                }
+            }
+        ]
+    ]
+}
