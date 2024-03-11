@@ -99,7 +99,12 @@ Cac buoc tao base 1 du an reactjs
     - bat auto format on save CTRL + , va check on vao Editor: Format On Save
 
 4. Cấu hình sử dụng CSS/SASS
+
     - tao Global style component
     - cai thu vien SASS `npm i -D sass` cho dev
     - reset CSS normalize.css `npm i normalize.css`
     - Default CSS: font-family, font-size, line-height
+
+5. Cấu hình Router/Layout cho dự án
+
+    - Cài đặt react-router-dom: npm i react-router-dom
