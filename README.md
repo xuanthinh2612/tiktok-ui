@@ -108,3 +108,8 @@ Cac buoc tao base 1 du an reactjs
 5. Cấu hình Router/Layout cho dự án
 
     - Cài đặt react-router-dom: npm i react-router-dom
+
+6. Cai class npm i classnames
+
+7. cài font awesome
+    - copy vao package.json và run npm i
