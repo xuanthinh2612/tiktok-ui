@@ -113,3 +113,5 @@ Cac buoc tao base 1 du an reactjs
 
 7. cài font awesome
     - copy vao package.json và run npm i
+8. cài thư viện tippyjs react (drop list for search results) - # npm
+    - npm i @tippyjs/react
