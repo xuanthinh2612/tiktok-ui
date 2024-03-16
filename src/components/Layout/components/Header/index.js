@@ -25,6 +25,8 @@ import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu';
+import { InboxIcon, MessageIcon, SearchIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -136,7 +138,7 @@ function Header() {
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner} /> */}
                         <TippyDefault content="Tìm kiếm" placement="bottom">
                             <button className={cx('search-btn')}>
-                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                <SearchIcon />
                             </button>
                         </TippyDefault>
                     </div>
@@ -144,9 +146,20 @@ function Header() {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <TippyDefault delay={[0, 200]} content="Upload video" placement="bottom">
+                            <TippyDefault delay={[0, 50]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                </button>
+                            </TippyDefault>
+                            <TippyDefault delay={[0, 50]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </TippyDefault>
+                            <TippyDefault delay={[0, 50]} content="Inbox" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </TippyDefault>
                         </>
@@ -161,10 +174,12 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/d70d41a605dec9a0a0ccf6eccb8eca3c.jpeg?lk3s=a5d48078&x-expires=1710590400&x-signature=BdZywJ7OHFJ%2Fcga3py50yECT7tk%3D"
                                 alt="Nguyen Van A"
+
+                                // fallback="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
