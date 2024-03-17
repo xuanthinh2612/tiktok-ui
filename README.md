@@ -105,7 +105,7 @@ Cac buoc tao base 1 du an reactjs
     - reset CSS normalize.css `npm i normalize.css`
     - Default CSS: font-family, font-size, line-height
 
-5. Cấu hình Router/Layout cho dự án
+5. Cấu hình Router/layout cho dự án
 
     - Cài đặt react-router-dom: npm i react-router-dom
 

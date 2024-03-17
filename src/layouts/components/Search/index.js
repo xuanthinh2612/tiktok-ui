@@ -2,9 +2,8 @@ import { useEffect, useState, useRef } from 'react';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TippyHeadless from '@tippyjs/react/headless';
-import TippyDefault from '@tippyjs/react';
 
-import * as searchService from '~/apiService/searchService';
+import * as searchService from '~/services/searchService';
 import classNames from 'classnames/bind';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
