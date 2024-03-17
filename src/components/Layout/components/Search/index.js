@@ -69,6 +69,13 @@ function Search() {
         setShowResult(false);
     };
 
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
+    };
+
     return (
         <TippyHeadless
             interactive
@@ -92,7 +99,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Search account"
                     spellCheck={false}
-                    onChange={(e) => setSearchValue(e.target.value)}
+                    onChange={handleChange}
                     onFocus={() => setShowResult(true)}
                 />
 
@@ -103,11 +110,9 @@ function Search() {
                 )}
 
                 {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-                <TippyDefault content="Tìm kiếm" placement="bottom">
-                    <button className={cx('search-btn')}>
-                        <SearchIcon />
-                    </button>
-                </TippyDefault>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
+                    <SearchIcon />
+                </button>
             </div>
         </TippyHeadless>
     );
