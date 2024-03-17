@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TippyHeadless from '@tippyjs/react/headless';
 import TippyDefault from '@tippyjs/react';
 
+import * as searchService from '~/apiService/searchService';
 import classNames from 'classnames/bind';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
@@ -28,17 +29,34 @@ function Search() {
             return;
         }
 
-        setLoading(true);
+        const fetchApi = async () => {
+            setLoading(true);
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debouced)}&type=less`)
-            .then((res) => res.json())
-            .then((res) => {
-                console.log(res);
-                if (res.data) {
-                    setSearchResult(res.data);
-                    setLoading(false);
-                }
-            });
+            const result = await searchService.search(debouced);
+            setSearchResult(result);
+
+            setLoading(false);
+        };
+
+        fetchApi();
+
+        // request
+        //     .get(`users/search`, {
+        //         params: {
+        //             q: encodeURIComponent(debouced),
+        //             type: 'less',
+        //         },
+        //     })
+
+        //     .then((res) => {
+        //         if (res.data) {
+        //             setSearchResult(res.data);
+        //             setLoading(false);
+        //         }
+        //     })
+        //     .catch(() => {
+        //         setLoading(false);
+        //     });
     }, [debouced]);
 
     const handleClear = () => {

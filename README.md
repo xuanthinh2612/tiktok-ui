@@ -114,4 +114,10 @@ Cac buoc tao base 1 du an reactjs
 7. cài font awesome
     - copy vao package.json và run npm i
 8. cài thư viện tippyjs react (drop list for search results) - # npm
+
     - npm i @tippyjs/react
+
+9. Cài thư viện axios de call api thong qua instance
+    - npm install axios
+    - Tách axios sang file util de call api
+    - service sẽ gọi file util và ở các component sẽ gọi service
