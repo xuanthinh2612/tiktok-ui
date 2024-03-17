@@ -118,6 +118,15 @@ Cac buoc tao base 1 du an reactjs
     - npm i @tippyjs/react
 
 9. Cài thư viện axios de call api thong qua instance
+
     - npm install axios
     - Tách axios sang file util de call api
     - service sẽ gọi file util và ở các component sẽ gọi service
+
+10. propType (thư viện để validate các prop cho component)
+    - nếu sử dụng create-react-app để tạo dự án thì không cần cài thêm
+
+Chú ý:
+
+simpleReact Snipest : để viết tắt các import, tạo mới hàm...
+ESLint pretier : format code
