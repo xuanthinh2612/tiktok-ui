@@ -130,3 +130,6 @@ Chú ý:
 
 simpleReact Snipest : để viết tắt các import, tạo mới hàm...
 ESLint pretier : format code
+
+-   NavLink trong react tự động thêm active class vào trong link được chọn.
+    sử dụng NavLink luôn cung cấp biến navData để check có active hay không: cách dùng: className={(nav) => cx("className-1", {active: nav.isActive})} và css cho class active trong module css
